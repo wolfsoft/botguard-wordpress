@@ -1,0 +1,28 @@
+{
+    "name": "wolfsoft/botguard-wordpress",
+    "description": "BotGuard API Connector for WordPress",
+    "type": "project",
+    "license": "GPLv2 or later",
+    "authors": [
+        {
+            "name": "Dennis Prochko",
+            "email": "support@botguard.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "wolfsoft/botguard-php": "dev-master"
+    },
+    "scripts": {
+        "build": [
+        	"@prepdir",
+        	"@copyvendor",
+        	"@addstubs",
+        	"@fixacl"
+        ],
+        "prepdir": "mkdir -p botguard/includes/vendor/wolfsoft/botguard-php && cp -a src/* botguard/ && cp LICENSE.txt botguard/",
+        "copyvendor": "cp -a vendor/composer botguard/includes/vendor/ && cp -a vendor/autoload.php botguard/includes/vendor/ && cp -a vendor/wolfsoft/botguard-php/src botguard/includes/vendor/wolfsoft/botguard-php/",
+        "addstubs": "echo '<?php // Silence is golden' > /tmp/index.php && find botguard/ -type d -exec cp /tmp/index.php '{}' ';' && rm -f /tmp/index.php",
+        "fixacl": "find botguard/ -type d -exec chmod ug=rwx,o=rx '{}' ';' && find botguard/ -type f -exec chmod ug=rw,o=r '{}' ';'"
+    }
+}

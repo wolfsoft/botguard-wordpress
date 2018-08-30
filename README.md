@@ -1,25 +1,36 @@
-# BotGuard WordPress Plugin
+# BotGuard plugin for WordPress
 
-BotGuard provides the service to protect your website from malicious bots, crawlers, scrapers, and hacker attacks.
+BotGuard provides the service to protect your website from malicious bots, crawlers, scrapers, and hacker attacks. The plugin implements BotGuard API.
 
-## Recommended Tools
+## Building
 
-### i18n Tools
+You will need `composer` installed to build from source. To complete the following steps, you will need to open a command line terminal.
 
-There are tools that are recommended for providing correct, translatable files:
+Clone the Github repository:
 
-* [Poedit](http://www.poedit.net/)
-* [makepot](http://i18n.svn.wordpress.org/tools/trunk/)
-* [i18n](https://github.com/grappler/i18n)
+git clone https://github.com/wolfsoft/botguard-wordpress.git
 
-Any of the above tools should provide you with the proper tooling to internationalize the plugin.
+From within the checked out repository, run:
+
+```
+composer install
+composer build
+```
+
+The packaged zip file will be available under the build directory which is created under your locally cloned git repository.
+
+## Installation
+
+The plugin can be installed by upload `botguard.zip` within WordPress 'Add Plugin' admin page as usual.
 
 ## License
 
 The BotGuard WordPress Plugin is licensed under the GPL v2 or later.
 
 > This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, version 2, as published by the Free Software Foundation.
+
 > This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
 > You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
 A copy of the license is included, see `LICENSE.txt`.

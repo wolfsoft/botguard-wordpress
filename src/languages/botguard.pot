@@ -1,0 +1,69 @@
+# Copyright (C) 2018 BotGuard
+# This file is distributed under the same license as the BotGuard package.
+msgid ""
+msgstr ""
+"Project-Id-Version: BotGuard 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
+"POT-Creation-Date: 2018-08-30 18:12:07+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: admin/class-botguard-admin.php:62
+#: admin/partials/botguard-admin-display.php:18
+msgid "BotGuard Settings"
+msgstr ""
+
+#: admin/class-botguard-admin.php:69
+msgid "Main Settings"
+msgstr ""
+
+#: admin/class-botguard-admin.php:70
+msgid "Enabled"
+msgstr ""
+
+#: admin/class-botguard-admin.php:71
+msgid "Primary Server"
+msgstr ""
+
+#: admin/class-botguard-admin.php:72
+msgid "Secondary Server"
+msgstr ""
+
+#: admin/partials/botguard-admin-display.php:19
+msgid "Options related to BotGuard plugin."
+msgstr ""
+
+#: admin/partials/botguard-admin-display.php:30
+msgid "<p>Main Settings Description</p>"
+msgstr ""
+
+#: admin/partials/botguard-admin-display.php:48
+#: admin/partials/botguard-admin-display.php:54
+msgid "<p class=\"description\">The description of the option.</p>"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "BotGuard"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://botguard.net"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"BotGuard provides the service to protect your website from malicious bots, "
+"crawlers, scrapers, and hacker attacks."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Dennis Prochko"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "mailto:support@botguard.net"
+msgstr ""

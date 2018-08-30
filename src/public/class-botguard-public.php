@@ -68,10 +68,10 @@ class BotGuard_Public {
 
 		if ( $enabled && $server_primary && $server_secondary ) {
 
-			$botguard = BotGuard::instance( [
+			$botguard = BotGuard::instance( array(
 				'server' => $server_primary,
 				'backup' => $server_secondary,
-			] );
+			) );
 
 			$profile = $botguard->check();
 

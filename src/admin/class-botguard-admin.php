@@ -59,17 +59,17 @@ class BotGuard_Admin {
 	 * @since    1.0.0
 	 */
 	public function init_settings_page() {
-		add_options_page( 'BotGuard Settings', 'BotGuard', 'manage_options', 'botguard', 'botguard_options_page' );
+		add_options_page( __( 'BotGuard Settings', 'botguard' ), 'BotGuard', 'manage_options', 'botguard', 'botguard_options_page' );
 	}
 
 	public function init_admin_page() {
 		register_setting( 'botguard', 'botguard_enabled' );
 		register_setting( 'botguard', 'botguard_server_primary' );
 		register_setting( 'botguard', 'botguard_server_secondary' );
-		add_settings_section( 'botguard', 'Main Settings', 'botguard_settings_callback', 'botguard' );
-		add_settings_field( 'botguard_enabled', 'Enabled', 'botguard_enabled_callback', 'botguard', 'botguard' );
-		add_settings_field( 'botguard_server_primary', 'Primary Server', 'botguard_server_primary_callback', 'botguard', 'botguard' );
-		add_settings_field( 'botguard_server_secondary', 'Secondary Server', 'botguard_server_secondary_callback', 'botguard', 'botguard' );
+		add_settings_section( 'botguard', __( 'Main Settings', 'botguard' ), 'botguard_settings_callback', 'botguard' );
+		add_settings_field( 'botguard_enabled', __( 'Enabled', 'botguard' ), 'botguard_enabled_callback', 'botguard', 'botguard' );
+		add_settings_field( 'botguard_server_primary', __( 'Primary Server', 'botguard' ), 'botguard_server_primary_callback', 'botguard', 'botguard' );
+		add_settings_field( 'botguard_server_secondary', __( 'Secondary Server', 'botguard' ), 'botguard_server_secondary_callback', 'botguard', 'botguard' );
 	}
 
 }

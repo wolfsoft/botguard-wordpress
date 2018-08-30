@@ -15,8 +15,8 @@
 function botguard_options_page() {
 ?>
 <div class="wrap">
-	<h1>BotGuard Settings</h1>
-	<p>Options related to BotGuard plugin.</p>
+	<h1><?php _e( 'BotGuard Settings', 'botguard' ); ?></h1>
+	<p><?php _e( 'Options related to BotGuard plugin.', 'botguard' ); ?></p>
 	<form action="options.php" method="post">
 		<?php settings_fields( 'botguard' ); ?>
 		<?php do_settings_sections( 'botguard' ); ?>
@@ -27,7 +27,7 @@ function botguard_options_page() {
 }
 
 function botguard_settings_callback() {
-	echo '<p>Main Settings Description</p>';
+	_e( '<p>Main Settings Description</p>', 'botguard' );
 }
 
 function botguard_enabled_callback() {
@@ -35,21 +35,23 @@ function botguard_enabled_callback() {
 	$setting = esc_attr( get_option( 'botguard_enabled' ) );
 
 	if ( $setting ) {
-	    echo "<input type='checkbox' name='botguard_enabled' checked='checked' value='1' />";
+	    echo '<input type="checkbox" name="botguard_enabled" checked="checked" value="1" />';
 	} else {
-        echo "<input type='checkbox' name='botguard_enabled' value='1' />";
+        echo '<input type="checkbox" name="botguard_enabled" value="1" />';
 	}
 
 }
 
 function botguard_server_primary_callback() {
 	$setting = esc_attr( get_option( 'botguard_server_primary' ) );
-    echo "<input type='text' name='botguard_server_primary' value='$setting' /><p class='description'>The description of the option.</p>";
+    echo "<input type='text' name='botguard_server_primary' value='$setting' />";
+    _e( '<p class="description">The description of the option.</p>', 'botguard' );
 }
 
 function botguard_server_secondary_callback() {
 	$setting = esc_attr( get_option( 'botguard_server_secondary' ) );
-    echo "<input type='text' name='botguard_server_secondary' value='$setting' /><p class='description'>The description of the option.</p>";
+    echo "<input type='text' name='botguard_server_secondary' value='$setting' />";
+    _e( '<p class="description">The description of the option.</p>', 'botguard' );
 }
 
 ?>

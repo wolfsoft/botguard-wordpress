@@ -8,7 +8,9 @@ You will need `composer` installed to build from source. To complete the followi
 
 Clone the Github repository:
 
+```
 git clone https://github.com/wolfsoft/botguard-wordpress.git
+```
 
 From within the checked out repository, run:
 

@@ -22,12 +22,19 @@
         	"@compress",
         	"@cleanup"
         ],
+        "i18n": [
+        	"@makepot",
+        	"@mergepo",
+        	"@buildmo"
+        ],
         "prepdir": "mkdir -p botguard/includes/vendor/wolfsoft/botguard-php && cp -a src/* botguard/ && cp LICENSE.txt botguard/",
         "copyvendor": "cp -a vendor/composer botguard/includes/vendor/ && cp -a vendor/autoload.php botguard/includes/vendor/ && cp -a vendor/wolfsoft/botguard-php/src botguard/includes/vendor/wolfsoft/botguard-php/",
         "addstubs": "echo '<?php // Silence is golden' > /tmp/index.php && find botguard/ -type d -exec cp /tmp/index.php '{}' ';' && rm -f /tmp/index.php",
         "fixacl": "find botguard/ -type d -exec chmod ug=rwx,o=rx '{}' ';' && find botguard/ -type f -exec chmod ug=rw,o=r '{}' ';'",
         "compress": "zip -r botguard.zip botguard/",
         "cleanup": "rm -rf botguard/",
-        "makepot": "php ../wpi18n/wordpress-develop/tools/i18n/makepot.php wp-plugin src/ src/languages/botguard.pot"
+        "makepot": "php ../wpi18n/wordpress-develop/tools/i18n/makepot.php wp-plugin src/ src/languages/botguard.pot",
+        "mergepo": "msgmerge -U src/languages/*.po src/languages/botguard.pot",
+        "buildmo": "bash -c 'for file in `find src/languages/ -name \"*.po\"` ; do msgfmt -o ${file/.po/.mo} $file ; done'"
     }
 }

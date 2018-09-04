@@ -4,40 +4,44 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BotGuard 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
-"POT-Creation-Date: 2018-09-04 12:32:45+00:00\n"
+"POT-Creation-Date: 2018-09-04 12:05:14+00:00\n"
+"PO-Revision-Date: 2018-09-03 05:09+0300\n"
+"Last-Translator: Dennis Prochko <wolfsoft@mail.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: admin/class-botguard-admin.php:62
 #: admin/partials/botguard-admin-display.php:18
 msgid "BotGuard Settings"
-msgstr ""
+msgstr "Настройки BotGuard"
 
 #: admin/class-botguard-admin.php:69
 msgid "Main Settings"
-msgstr ""
+msgstr "Основные настройки"
 
 #: admin/class-botguard-admin.php:70
 msgid "Enabled"
-msgstr ""
+msgstr "Включено"
 
 #: admin/class-botguard-admin.php:71
 msgid "Primary Server"
-msgstr ""
+msgstr "Основной сервер"
 
 #: admin/class-botguard-admin.php:72
 msgid "Secondary Server"
-msgstr ""
+msgstr "Дополнительный сервер"
 
 #: admin/partials/botguard-admin-display.php:19
 msgid ""
 "<p>BotGuard provides the service to protect your website from malicious "
 "bots, crawlers, scrapers, and hacker attacks.</p>"
 msgstr ""
+"<p>BotGuard предоставляет сервис для защиты вашего веб сайта от вредоносных "
+"ботов, «пауков», граберов контента и хакерских атак.</p>"
 
 #: admin/partials/botguard-admin-display.php:30
 msgid ""
@@ -45,35 +49,40 @@ msgid ""
 "the <a href=\"https://botguard.net/en/dashboard\" target=\"_blank\">BotGuard "
 "dashboard</a>.</p>"
 msgstr ""
+"<p>Адреса основного и дополнительного серверов BotGuard можно узнать в <a "
+"href=\"https://botguard.net/ru/dashboard\" target=\"_blank\">панели "
+"управления</a>.</p>"
 
 #: admin/partials/botguard-admin-display.php:48
 msgid ""
 "<p class=\"description\">The address of the primary BotGuard server.</p>"
-msgstr ""
+msgstr "<p class=\"description\">Адрес основного сервера BotGuard.</p>"
 
 #: admin/partials/botguard-admin-display.php:54
 msgid ""
 "<p class=\"description\">The address of the secondary BotGuard server.</p>"
-msgstr ""
+msgstr "<p class=\"description\">Адрес дополнительного сервера BotGuard.</p>"
 
 #. Plugin Name of the plugin/theme
 msgid "BotGuard"
-msgstr ""
+msgstr "BotGuard"
 
 #. Plugin URI of the plugin/theme
 msgid "https://botguard.net"
-msgstr ""
+msgstr "https://botguard.net"
 
 #. Description of the plugin/theme
 msgid ""
 "BotGuard provides the service to protect your website from malicious bots, "
 "crawlers, scrapers, and hacker attacks."
 msgstr ""
+"BotGuard предоставляет сервис для защиты вашего веб сайта от вредоносных "
+"ботов, «пауков», граберов контента и хакерских атак."
 
 #. Author of the plugin/theme
 msgid "Dennis Prochko"
-msgstr ""
+msgstr "Прочко Денис"
 
 #. Author URI of the plugin/theme
 msgid "mailto:support@botguard.net"
-msgstr ""
+msgstr "mailto:support@botguard.net"

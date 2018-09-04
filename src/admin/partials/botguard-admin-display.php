@@ -16,7 +16,7 @@ function botguard_options_page() {
 ?>
 <div class="wrap">
 	<h1><?php _e( 'BotGuard Settings', 'botguard' ); ?></h1>
-	<p><?php _e( 'Options related to BotGuard plugin.', 'botguard' ); ?></p>
+	<?php _e( '<p>BotGuard provides the service to protect your website from malicious bots, crawlers, scrapers, and hacker attacks.</p>', 'botguard' ); ?>
 	<form action="options.php" method="post">
 		<?php settings_fields( 'botguard' ); ?>
 		<?php do_settings_sections( 'botguard' ); ?>
@@ -27,7 +27,7 @@ function botguard_options_page() {
 }
 
 function botguard_settings_callback() {
-	_e( '<p>Main Settings Description</p>', 'botguard' );
+	_e( '<p>The primary and secondary BotGuard server addresses can be obtained in the <a href="https://botguard.net/en/dashboard" target="_blank">BotGuard dashboard</a>.</p>', 'botguard' );
 }
 
 function botguard_enabled_callback() {
@@ -45,13 +45,13 @@ function botguard_enabled_callback() {
 function botguard_server_primary_callback() {
 	$setting = esc_attr( get_option( 'botguard_server_primary' ) );
     echo "<input type='text' name='botguard_server_primary' value='$setting' />";
-    _e( '<p class="description">The description of the option.</p>', 'botguard' );
+    _e( '<p class="description">The address of the primary BotGuard server.</p>', 'botguard' );
 }
 
 function botguard_server_secondary_callback() {
 	$setting = esc_attr( get_option( 'botguard_server_secondary' ) );
     echo "<input type='text' name='botguard_server_secondary' value='$setting' />";
-    _e( '<p class="description">The description of the option.</p>', 'botguard' );
+    _e( '<p class="description">The address of the secondary BotGuard server.</p>', 'botguard' );
 }
 
 ?>

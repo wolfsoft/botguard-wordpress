@@ -25,7 +25,8 @@
         "i18n": [
         	"@makepot",
         	"@mergepo",
-        	"@buildmo"
+        	"@buildmo",
+        	"@cleanmo"
         ],
         "prepdir": "mkdir -p botguard/includes/vendor/wolfsoft/botguard-php && cp -a src/* botguard/ && cp LICENSE.txt botguard/",
         "copyvendor": "cp -a vendor/composer botguard/includes/vendor/ && cp -a vendor/autoload.php botguard/includes/vendor/ && cp -a vendor/wolfsoft/botguard-php/src botguard/includes/vendor/wolfsoft/botguard-php/",
@@ -35,6 +36,7 @@
         "cleanup": "rm -rf botguard/",
         "makepot": "php ../wpi18n/wordpress-develop/tools/i18n/makepot.php wp-plugin src/ src/languages/botguard.pot",
         "mergepo": "msgmerge -U src/languages/*.po src/languages/botguard.pot",
-        "buildmo": "bash -c 'for file in `find src/languages/ -name \"*.po\"` ; do msgfmt -o ${file/.po/.mo} $file ; done'"
+        "buildmo": "bash -c 'for file in `find src/languages/ -name \"*.po\"` ; do msgfmt -o ${file/.po/.mo} $file ; done'",
+        "cleanmo": "rm -f src/languages/*.*~"
     }
 }

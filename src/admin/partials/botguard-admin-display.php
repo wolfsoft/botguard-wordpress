@@ -40,6 +40,8 @@ function botguard_enabled_callback() {
         echo '<input type="checkbox" name="botguard_enabled" value="1" />';
 	}
 
+    _e( '<p class="description">Check Blocking Mode to block bots, uncheck to detect only.</p>', 'botguard' );
+
 }
 
 function botguard_server_primary_callback() {

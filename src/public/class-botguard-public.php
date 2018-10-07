@@ -66,7 +66,7 @@ class BotGuard_Public {
 		$server_primary = get_option( 'botguard_server_primary' );
 		$server_secondary = get_option( 'botguard_server_secondary' );
 
-		if ( $enabled && $server_primary && $server_secondary ) {
+		if ( $server_primary && $server_secondary ) {
 
 			$botguard = BotGuard::instance( array(
 				'server' => $server_primary,
@@ -75,14 +75,20 @@ class BotGuard_Public {
 
 			$profile = $botguard->check();
 
-			if ( $profile->getScore() >= 5 ) {
-				http_response_code(403);
-				die();
-			}
+			$current_user = wp_get_current_user();
 
-			if ( $profile->getScore() > 0 ) {
-				$botguard->challenge();
-				die();
+			if ( $enabled && !user_can( $current_user, 'administrator' ) ) {
+
+				if ( $profile->getScore() >= 5 ) {
+					http_response_code(403);
+					die();
+				}
+
+				if ( $profile->getScore() > 0 ) {
+					$botguard->challenge();
+					die();
+				}
+
 			}
 
 		}

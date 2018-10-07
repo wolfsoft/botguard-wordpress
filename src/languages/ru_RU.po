@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BotGuard 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
-"POT-Creation-Date: 2018-09-04 12:05:14+00:00\n"
-"PO-Revision-Date: 2018-09-03 05:09+0300\n"
+"POT-Creation-Date: 2018-10-07 14:36:38+00:00\n"
+"PO-Revision-Date: 2018-10-07 17:39+0300\n"
 "Last-Translator: Dennis Prochko <wolfsoft@mail.ru>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -24,8 +24,8 @@ msgid "Main Settings"
 msgstr "Основные настройки"
 
 #: admin/class-botguard-admin.php:70
-msgid "Enabled"
-msgstr "Включено"
+msgid "Blocking Mode"
+msgstr "Режим блокирования"
 
 #: admin/class-botguard-admin.php:71
 msgid "Primary Server"
@@ -53,12 +53,20 @@ msgstr ""
 "href=\"https://botguard.net/ru/dashboard\" target=\"_blank\">панели "
 "управления</a>.</p>"
 
-#: admin/partials/botguard-admin-display.php:48
+#: admin/partials/botguard-admin-display.php:43
+msgid ""
+"<p class=\"description\">Check Blocking Mode to block bots, uncheck to "
+"detect only.</p>"
+msgstr ""
+"<p class=\"description\">Установите флажок Режим Блокирования для блокировки "
+"ботов, снимите флажок для только их обнаружения.</p>"
+
+#: admin/partials/botguard-admin-display.php:50
 msgid ""
 "<p class=\"description\">The address of the primary BotGuard server.</p>"
 msgstr "<p class=\"description\">Адрес основного сервера BotGuard.</p>"
 
-#: admin/partials/botguard-admin-display.php:54
+#: admin/partials/botguard-admin-display.php:56
 msgid ""
 "<p class=\"description\">The address of the secondary BotGuard server.</p>"
 msgstr "<p class=\"description\">Адрес дополнительного сервера BotGuard.</p>"
@@ -86,3 +94,6 @@ msgstr "Прочко Денис"
 #. Author URI of the plugin/theme
 msgid "mailto:support@botguard.net"
 msgstr "mailto:support@botguard.net"
+
+#~ msgid "Enabled"
+#~ msgstr "Включено"

@@ -67,7 +67,7 @@ class BotGuard_Admin {
 		register_setting( 'botguard', 'botguard_server_primary' );
 		register_setting( 'botguard', 'botguard_server_secondary' );
 		add_settings_section( 'botguard', __( 'Main Settings', 'botguard' ), 'botguard_settings_callback', 'botguard' );
-		add_settings_field( 'botguard_enabled', __( 'Enabled', 'botguard' ), 'botguard_enabled_callback', 'botguard', 'botguard' );
+		add_settings_field( 'botguard_enabled', __( 'Blocking Mode', 'botguard' ), 'botguard_enabled_callback', 'botguard', 'botguard' );
 		add_settings_field( 'botguard_server_primary', __( 'Primary Server', 'botguard' ), 'botguard_server_primary_callback', 'botguard', 'botguard' );
 		add_settings_field( 'botguard_server_secondary', __( 'Secondary Server', 'botguard' ), 'botguard_server_secondary_callback', 'botguard', 'botguard' );
 	}

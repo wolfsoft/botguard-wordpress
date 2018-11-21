@@ -73,11 +73,11 @@ class BotGuard_Public {
 				'backup' => $server_secondary,
 			) );
 
-			$profile = $botguard->check();
-
 			$current_user = wp_get_current_user();
 
 			if ( $enabled && !user_can( $current_user, 'administrator' ) ) {
+
+				$profile = $botguard->check();
 
 				if ( $profile->getScore() >= 5 ) {
 					http_response_code(403);

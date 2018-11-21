@@ -179,7 +179,7 @@ class BotGuard {
 
 		$plugin_public = new BotGuard_Public( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'init', $plugin_public, 'process_request' );
+		$this->loader->add_action( 'init', $plugin_public, 'process_request', 0 );
 
 	}
 

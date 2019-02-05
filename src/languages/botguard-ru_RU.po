@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the BotGuard package.
 msgid ""
 msgstr ""
-"Project-Id-Version: BotGuard 1.0.1\n"
+"Project-Id-Version: BotGuard 1.0.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
-"POT-Creation-Date: 2018-10-07 14:36:38+00:00\n"
-"PO-Revision-Date: 2018-10-07 18:19+0300\n"
+"POT-Creation-Date: 2019-02-03 23:46:42+00:00\n"
+"PO-Revision-Date: 2019-02-04 02:48+0300\n"
 "Last-Translator: Dennis Prochko <wolfsoft@mail.ru>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -19,54 +19,41 @@ msgstr ""
 msgid "BotGuard Settings"
 msgstr "Настройки BotGuard"
 
-#: admin/class-botguard-admin.php:69
+#: admin/class-botguard-admin.php:68
 msgid "Main Settings"
 msgstr "Основные настройки"
 
-#: admin/class-botguard-admin.php:70
-msgid "Blocking Mode"
-msgstr "Режим блокирования"
-
-#: admin/class-botguard-admin.php:71
+#: admin/class-botguard-admin.php:69
 msgid "Primary Server"
 msgstr "Основной сервер"
 
-#: admin/class-botguard-admin.php:72
+#: admin/class-botguard-admin.php:70
 msgid "Secondary Server"
 msgstr "Дополнительный сервер"
 
 #: admin/partials/botguard-admin-display.php:19
 msgid ""
-"<p>BotGuard provides the service to protect your website from malicious "
-"bots, crawlers, scrapers, and hacker attacks.</p>"
+"<p>To configure bot blocking options, please visit the <a href=\"https://"
+"botguard.net/en/website\" target=\"_blank\">Botguard dashboard</a>.</p>"
 msgstr ""
-"<p>BotGuard предоставляет сервис для защиты вашего веб сайта от вредоносных "
-"ботов, «пауков», граберов контента и хакерских атак.</p>"
+"<p>Для настройки параметров блокировки ботов, посетите страницу <a href="
+"\"https://botguard.net/ru/website\" target=\"_blank\">панели управления "
+"BotGuard</a>.</p>"
 
 #: admin/partials/botguard-admin-display.php:30
 msgid ""
-"<p>The primary and secondary BotGuard server addresses can be obtained in "
-"the <a href=\"https://botguard.net/en/dashboard\" target=\"_blank\">BotGuard "
-"dashboard</a>.</p>"
+"<p>The primary and secondary BotGuard server addresses assigned to your web "
+"site.</p>"
 msgstr ""
-"<p>Адреса основного и дополнительного серверов BotGuard можно узнать в <a "
-"href=\"https://botguard.net/ru/dashboard\" target=\"_blank\">панели "
-"управления</a>.</p>"
+"<p>Адреса основного и дополнительного серверов BotGuard, назначенных вашему "
+"веб сайту.</p>"
 
-#: admin/partials/botguard-admin-display.php:43
-msgid ""
-"<p class=\"description\">Check Blocking Mode to block bots, uncheck to "
-"detect only.</p>"
-msgstr ""
-"<p class=\"description\">Установите флажок для блокировки ботов, снимите "
-"флажок только для их обнаружения.</p>"
-
-#: admin/partials/botguard-admin-display.php:50
+#: admin/partials/botguard-admin-display.php:36
 msgid ""
 "<p class=\"description\">The address of the primary BotGuard server.</p>"
 msgstr "<p class=\"description\">Адрес основного сервера BotGuard.</p>"
 
-#: admin/partials/botguard-admin-display.php:56
+#: admin/partials/botguard-admin-display.php:42
 msgid ""
 "<p class=\"description\">The address of the secondary BotGuard server.</p>"
 msgstr "<p class=\"description\">Адрес дополнительного сервера BotGuard.</p>"

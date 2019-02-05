@@ -69,7 +69,7 @@ class BotGuard {
 		if ( defined( 'PLUGIN_NAME_VERSION' ) ) {
 			$this->version = PLUGIN_NAME_VERSION;
 		} else {
-			$this->version = '1.0.1';
+			$this->version = '1.0.2';
 		}
 		$this->plugin_name = 'botguard';
 
@@ -179,7 +179,7 @@ class BotGuard {
 
 		$plugin_public = new BotGuard_Public( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'init', $plugin_public, 'process_request', 0 );
+		$this->loader->add_action( 'init', $plugin_public, 'process_request' );
 
 	}
 

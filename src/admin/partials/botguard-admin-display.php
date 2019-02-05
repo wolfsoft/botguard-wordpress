@@ -16,7 +16,7 @@ function botguard_options_page() {
 ?>
 <div class="wrap">
 	<h1><?php _e( 'BotGuard Settings', 'botguard' ); ?></h1>
-	<?php _e( '<p>BotGuard provides the service to protect your website from malicious bots, crawlers, scrapers, and hacker attacks.</p>', 'botguard' ); ?>
+	<?php _e( '<p>To configure bot blocking options, please visit the <a href="https://botguard.net/en/website" target="_blank">Botguard dashboard</a>.</p>', 'botguard' ); ?>
 	<form action="options.php" method="post">
 		<?php settings_fields( 'botguard' ); ?>
 		<?php do_settings_sections( 'botguard' ); ?>
@@ -27,21 +27,7 @@ function botguard_options_page() {
 }
 
 function botguard_settings_callback() {
-	_e( '<p>The primary and secondary BotGuard server addresses can be obtained in the <a href="https://botguard.net/en/dashboard" target="_blank">BotGuard dashboard</a>.</p>', 'botguard' );
-}
-
-function botguard_enabled_callback() {
-
-	$setting = esc_attr( get_option( 'botguard_enabled' ) );
-
-	if ( $setting ) {
-	    echo '<input type="checkbox" name="botguard_enabled" checked="checked" value="1" />';
-	} else {
-        echo '<input type="checkbox" name="botguard_enabled" value="1" />';
-	}
-
-    _e( '<p class="description">Check Blocking Mode to block bots, uncheck to detect only.</p>', 'botguard' );
-
+	_e( '<p>The primary and secondary BotGuard server addresses assigned to your web site.</p>', 'botguard' );
 }
 
 function botguard_server_primary_callback() {

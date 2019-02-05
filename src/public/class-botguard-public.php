@@ -62,7 +62,6 @@ class BotGuard_Public {
 	 */
 	public function process_request() {
 
-		$enabled = get_option( 'botguard_enabled' );
 		$server_primary = get_option( 'botguard_server_primary' );
 		$server_secondary = get_option( 'botguard_server_secondary' );
 
@@ -73,22 +72,16 @@ class BotGuard_Public {
 				'backup' => $server_secondary,
 			) );
 
-			$current_user = wp_get_current_user();
+			$profile = $botguard->check();
 
-			if ( $enabled && !user_can( $current_user, 'administrator' ) ) {
+			if ( $profile->getScore() >= 5 ) {
+				http_response_code(403);
+				die();
+			}
 
-				$profile = $botguard->check();
-
-				if ( $profile->getScore() >= 5 ) {
-					http_response_code(403);
-					die();
-				}
-
-				if ( $profile->getScore() > 0 ) {
-					$botguard->challenge();
-					die();
-				}
-
+			if ( $profile->getScore() > 0 ) {
+				$botguard->challenge();
+				die();
 			}
 
 		}

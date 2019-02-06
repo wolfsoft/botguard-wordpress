@@ -125,7 +125,7 @@ class BotGuard_Admin {
 
 	}
 
-	public function update_option( $old_value, $value ) {
+	public function update_option( $option, $value = '', $new_value = '' ) {
 
 		if ( $option == 'botguard_server_primary' || $option == 'botguard_server_secondary' ) {
 			self::update_config_file( $this->config );

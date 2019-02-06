@@ -155,7 +155,9 @@ class BotGuard {
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'init_admin_page' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'init_admin_menu' );
 		$this->loader->add_filter( 'plugin_action_links', $plugin_admin, 'init_plugin_links', 10, 2 );
+		$this->loader->add_action( 'added_option', $plugin_admin, 'update_option', 10, 2 );
 		$this->loader->add_action( 'updated_option', $plugin_admin, 'update_option', 10, 3 );
+		$this->loader->add_action( 'deleted_option', $plugin_admin, 'update_option', 10, 1 );
 
 	}
 

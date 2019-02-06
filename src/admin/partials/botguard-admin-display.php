@@ -16,12 +16,13 @@ function botguard_options_page() {
 ?>
 <div class="wrap">
 	<h1><?php _e( 'BotGuard Settings', 'botguard' ); ?></h1>
-	<?php _e( '<p>To configure bot blocking options, please visit the <a href="https://botguard.net/en/website" target="_blank">Botguard dashboard</a>.</p>', 'botguard' ); ?>
+	<?php _e( '<p>To configure bot blocking options, please visit the <a href="https://botguard.net/en/website" target="_blank">BotGuard dashboard</a>.</p>', 'botguard' ); ?>
 	<form action="options.php" method="post">
 		<?php settings_fields( 'botguard' ); ?>
 		<?php do_settings_sections( 'botguard' ); ?>
 		<?php submit_button(); ?>
 	</form>
+	<?php _e('<h4>Note</h4><p>If you will be blocked ("Forbidden"), do the following:</p><ol><li>Visit the <a href="https://botguard.net/en/website" target="_blank">BotGuard dashboard</a>, and add your IP address to whitelist on the website configuration page, or</li><li>Turn off blocking mode on the BotGuard dashboard and contact BotGuard <a href="mailto:support@botguard.net">support team</a> to resolve the issue, or</li><li>Deactivate this plugin, or</li><li>Remove this plugin manually by deleting wp-content/plugins/botguard folder.</li></ol>', 'botguard'); ?>
 </div>
 <?php
 }

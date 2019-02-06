@@ -69,7 +69,7 @@ class BotGuard {
 		if ( defined( 'PLUGIN_NAME_VERSION' ) ) {
 			$this->version = PLUGIN_NAME_VERSION;
 		} else {
-			$this->version = '1.0.2';
+			$this->version = '1.0.3';
 		}
 		$this->plugin_name = 'botguard';
 
@@ -120,17 +120,6 @@ class BotGuard {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/botguard-admin-display.php';
 
-		/**
-		 * The class responsible for defining all actions that occur in the public-facing
-		 * side of the site.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-botguard-public.php';
-
-		/**
-		 * The class responsible for BotGuard API.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/vendor/autoload.php';
-
 		$this->loader = new BotGuard_Loader();
 
 	}
@@ -164,7 +153,10 @@ class BotGuard {
 		$plugin_admin = new BotGuard_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'init_admin_page' );
-		$this->loader->add_action( 'admin_menu', $plugin_admin, 'init_settings_page' );
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'init_admin_menu' );
+		$this->loader->add_filter( 'plugin_action_links', $plugin_admin, 'init_plugin_links', 10, 2 );
+		$this->loader->add_action( 'updated_option_botguard_server_primary', $plugin_admin, 'update_option', 10, 2 );
+		$this->loader->add_action( 'updated_option_botguard_server_secondary', $plugin_admin, 'update_option', 10, 2 );
 
 	}
 
@@ -176,10 +168,6 @@ class BotGuard {
 	 * @access   private
 	 */
 	private function define_public_hooks() {
-
-		$plugin_public = new BotGuard_Public( $this->get_plugin_name(), $this->get_version() );
-
-		$this->loader->add_action( 'init', $plugin_public, 'process_request' );
 
 	}
 

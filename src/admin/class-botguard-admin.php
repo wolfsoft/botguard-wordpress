@@ -126,7 +126,11 @@ class BotGuard_Admin {
 	}
 
 	public function update_option( $old_value, $value ) {
-		self::update_config_file( $this->config );
+
+		if ( $option == 'botguard_server_primary' || $option == 'botguard_server_secondary' ) {
+			self::update_config_file( $this->config );
+		}
+
 	}
 
 	public static function update_config_file( $file ) {

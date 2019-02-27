@@ -16,7 +16,7 @@
  * Plugin Name:       BotGuard
  * Plugin URI:        https://botguard.net
  * Description:       BotGuard provides the service to protect your website from malicious bots, crawlers, scrapers, and hacker attacks.
- * Version:           1.0.3
+ * Version:           1.0.4
  * Author:            Dennis Prochko
  * Author URI:        mailto:support@botguard.net
  * License:           GPL-2.0+
@@ -33,7 +33,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'BotGuard_VERSION', '1.0.3' );
+define( 'BotGuard_VERSION', '1.0.4' );
 
 /**
  * The code that runs during plugin activation / deactivation.
@@ -42,7 +42,6 @@ define( 'BotGuard_VERSION', '1.0.3' );
 require_once plugin_dir_path( __FILE__ ) . 'includes/class-botguard-activator.php';
 register_activation_hook( __FILE__, array( 'BotGuard_Activator', 'activate' ) );
 register_deactivation_hook( __FILE__, array( 'BotGuard_Activator', 'deactivate' ) );
-add_action( 'admin_notices', array( 'BotGuard_Activator', 'show_admin_notice' ) );
 
 /**
  * The core plugin class that is used to define internationalization,

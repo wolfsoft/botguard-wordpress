@@ -64,6 +64,26 @@ class BotGuard_Admin {
 	}
 
 	/**
+	 * Utility functions
+	 *
+	 * @since    1.0.4
+	 */
+	public function isPluginActive( $plugin ) {
+		return in_array( $plugin, (array) get_option( 'active_plugins', array() ) ) || $this->isPluginActiveForNetwork( $plugin );
+	}
+
+	public function isPluginActiveForNetwork( $plugin ) {
+		if ( !is_multisite() )
+			return false;
+
+		$plugins = get_site_option( 'active_sitewide_plugins');
+		if ( isset($plugins[$plugin]) )
+			return true;
+
+		return false;
+	}
+
+	/**
 	 * Add plugin options page into WordPress admin area.
 	 *
 	 * @since    1.0.0
@@ -75,6 +95,13 @@ class BotGuard_Admin {
 		add_settings_field( 'botguard_server_primary', __( 'Primary Server', 'botguard' ), 'botguard_server_primary_callback', 'botguard', 'botguard' );
 		add_settings_field( 'botguard_server_secondary', __( 'Secondary Server', 'botguard' ), 'botguard_server_secondary_callback', 'botguard', 'botguard' );
 
+		if ($this->isPluginActive('wp-fastest-cache/wpFastestCache.php')) {
+			set_transient( 'wp_incompatible_plugins', true, 0 );
+			deactivate_plugins('wp-fastest-cache/wpFastestCache.php');
+			return;
+		}
+
+		BotGuard_Activator::activate();
 	}
 
 	public function init_admin_page() {
@@ -145,4 +172,23 @@ define( 'BOTGUARD_SERVER_SECONDARY', '$secondary' );
 EOT;
 		return file_put_contents( $file, $content ) !== false;
 	}
+
+	/**
+	 * Shows the help text.
+	 *
+	 * Provides the information about WordPress config modifications and activation errors.
+	 *
+	 * @since    1.0.4
+	 */
+	public function show_admin_notice() {
+		if ( get_transient( 'wp_settings_modified' ) ) {
+			echo '<div class="notice notice-success is-dismissible">' . __( '<p>Your <strong>wp-settings.php</strong> file was modified. Backup copy was created as <strong>wp-settings.php.bak</strong> file.</p>', 'botguard' ) . '</div>';
+			delete_transient( 'wp_settings_modified' );
+		}
+		if ( get_transient( 'wp_incompatible_plugins' ) ) {
+			echo '<div class="notice notice-success is-dismissible"><p>' . __( '<strong>WP Fastest Cache</strong> plugin is incompatible with BotGuard Wordpress Plugin and <strong>was deactivated</strong>' ) . '</p></div>';
+			delete_transient( 'wp_incompatible_plugins' );
+		}
+	}
+
 }

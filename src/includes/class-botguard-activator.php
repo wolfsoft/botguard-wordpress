@@ -64,7 +64,7 @@ EOT
 			die( sprintf( __( 'BotGuard configuration file %s is not writeable. Check file permissions.'), $botguard_config_file ) );
 		}
 
-		set_transient( 'wp_settings_modified', true, 5 );
+		set_transient( 'wp_settings_modified', true, 0 );
 
 	}
 
@@ -102,20 +102,6 @@ EOT
 			die( __( 'Can\'t overwrite wp-settings.php file. Please check file permissions, it\'s not writeable.' ) );
 		}
 
-	}
-
-	/**
-	 * Shows the help text.
-	 *
-	 * Provides the information about WordPress config modifications.
-	 *
-	 * @since    1.0.0
-	 */
-	public static function show_admin_notice() {
-		if ( get_transient( 'wp_settings_modified' ) ) {
-			echo '<div class="notice notice-success is-dismissible">' . __( '<p>Your <i>wp-settings.php</i> file was modified. Backup copy was created as <i>wp-settings.php.bak</i> file.</p>', 'botguard' ) . '</div>';
-			delete_transient( 'wp_settings_modified' );
-		}
 	}
 
 }

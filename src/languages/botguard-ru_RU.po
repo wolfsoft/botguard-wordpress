@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BotGuard 1.0.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
-"POT-Creation-Date: 2019-02-06 04:55:28+00:00\n"
-"PO-Revision-Date: 2019-02-06 08:00+0300\n"
+"POT-Creation-Date: 2019-02-27 22:49:30+00:00\n"
+"PO-Revision-Date: 2019-02-28 01:50+0300\n"
 "Last-Translator: Dennis Prochko <wolfsoft@mail.ru>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -14,49 +14,65 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: admin/class-botguard-admin.php:73
+#: admin/class-botguard-admin.php:93
 #: admin/partials/botguard-admin-display.php:18
 msgid "BotGuard Settings"
 msgstr "Настройки BotGuard"
 
-#: admin/class-botguard-admin.php:74
+#: admin/class-botguard-admin.php:94
 msgid "Main Settings"
 msgstr "Основные настройки"
 
-#: admin/class-botguard-admin.php:75
+#: admin/class-botguard-admin.php:95
 msgid "Primary Server"
 msgstr "Основной сервер"
 
-#: admin/class-botguard-admin.php:76
+#: admin/class-botguard-admin.php:96
 msgid "Secondary Server"
 msgstr "Дополнительный сервер"
 
-#: admin/class-botguard-admin.php:84
+#: admin/class-botguard-admin.php:111
 msgid "Primary Server name is not set."
 msgstr "Имя основного сервера не задано."
 
-#: admin/class-botguard-admin.php:89
+#: admin/class-botguard-admin.php:116
 msgid "Primary Server has incorrect value."
 msgstr "Имя основного сервера является некорректным."
 
-#: admin/class-botguard-admin.php:94 includes/class-botguard-activator.php:64
+#: admin/class-botguard-admin.php:121 includes/class-botguard-activator.php:64
 msgid ""
 "BotGuard configuration file %s is not writeable. Check file permissions."
 msgstr ""
 "Файл конфигурации BotGuard %s не доступен для записи. Проверьте права "
 "доступа к файлу."
 
-#: admin/class-botguard-admin.php:103
+#: admin/class-botguard-admin.php:130
 msgid "Secondary Server name is not set."
 msgstr "Имя дополнительного сервера не задано."
 
-#: admin/class-botguard-admin.php:108
+#: admin/class-botguard-admin.php:135
 msgid "Secondary Server has incorrect value."
 msgstr "Имя дополнительного сервера является некорректным."
 
-#: admin/class-botguard-admin.php:120
+#: admin/class-botguard-admin.php:147
 msgid "Settings"
 msgstr "Настройки"
+
+#: admin/class-botguard-admin.php:185
+msgid ""
+"<p>Your <strong>wp-settings.php</strong> file was modified. Backup copy was "
+"created as <strong>wp-settings.php.bak</strong> file.</p>"
+msgstr ""
+"<p>Ваш файл <strong>wp-settings.php</strong> был изменён. Резервная копия "
+"файла была создана под именем <strong>wp-settings.php.bak</strong>.</p>"
+
+#: admin/class-botguard-admin.php:189
+msgid ""
+"<strong>WP Fastest Cache</strong> plugin is incompatible with BotGuard "
+"Wordpress Plugin and <strong>was deactivated</strong>"
+msgstr ""
+"Плагин <strong>WP Fastest Cache</strong> несовместим с плагином BotGuard для "
+"Wordpress и <strong>был деактивирован</strong>"
 
 #: admin/partials/botguard-admin-display.php:19
 msgid ""
@@ -127,14 +143,6 @@ msgid ""
 msgstr ""
 "Невозможно перезаписать файл wp-settings.php. Пожалуйста, проверьте права "
 "доступа к файлу, он не открыт для записи."
-
-#: includes/class-botguard-activator.php:116
-msgid ""
-"<p>Your <i>wp-settings.php</i> file was modified. Backup copy was created as "
-"<i>wp-settings.php.bak</i> file.</p>"
-msgstr ""
-"<p>Ваш файл <i>wp-settings.php</i> был изменён. Резервная копия файла была "
-"создана под именем <i>wp-settings.php.bak</i>.</p>"
 
 #. Plugin Name of the plugin/theme
 msgid "BotGuard"

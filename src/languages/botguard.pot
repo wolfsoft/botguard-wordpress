@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the BotGuard package.
 msgid ""
 msgstr ""
-"Project-Id-Version: BotGuard 1.0.3\n"
+"Project-Id-Version: BotGuard 1.0.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
-"POT-Creation-Date: 2019-02-06 04:55:28+00:00\n"
+"POT-Creation-Date: 2019-02-27 22:49:30+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,46 +12,58 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: admin/class-botguard-admin.php:73
+#: admin/class-botguard-admin.php:93
 #: admin/partials/botguard-admin-display.php:18
 msgid "BotGuard Settings"
 msgstr ""
 
-#: admin/class-botguard-admin.php:74
+#: admin/class-botguard-admin.php:94
 msgid "Main Settings"
 msgstr ""
 
-#: admin/class-botguard-admin.php:75
+#: admin/class-botguard-admin.php:95
 msgid "Primary Server"
 msgstr ""
 
-#: admin/class-botguard-admin.php:76
+#: admin/class-botguard-admin.php:96
 msgid "Secondary Server"
 msgstr ""
 
-#: admin/class-botguard-admin.php:84
+#: admin/class-botguard-admin.php:111
 msgid "Primary Server name is not set."
 msgstr ""
 
-#: admin/class-botguard-admin.php:89
+#: admin/class-botguard-admin.php:116
 msgid "Primary Server has incorrect value."
 msgstr ""
 
-#: admin/class-botguard-admin.php:94 includes/class-botguard-activator.php:64
+#: admin/class-botguard-admin.php:121 includes/class-botguard-activator.php:64
 msgid ""
 "BotGuard configuration file %s is not writeable. Check file permissions."
 msgstr ""
 
-#: admin/class-botguard-admin.php:103
+#: admin/class-botguard-admin.php:130
 msgid "Secondary Server name is not set."
 msgstr ""
 
-#: admin/class-botguard-admin.php:108
+#: admin/class-botguard-admin.php:135
 msgid "Secondary Server has incorrect value."
 msgstr ""
 
-#: admin/class-botguard-admin.php:120
+#: admin/class-botguard-admin.php:147
 msgid "Settings"
+msgstr ""
+
+#: admin/class-botguard-admin.php:185
+msgid ""
+"<p>Your <strong>wp-settings.php</strong> file was modified. Backup copy was "
+"created as <strong>wp-settings.php.bak</strong> file.</p>"
+msgstr ""
+
+#: admin/class-botguard-admin.php:189
+msgid ""
+"<strong>WP Fastest Cache</strong> plugin is incompatible with BotGuard "
+"Wordpress Plugin and <strong>was deactivated</strong>"
 msgstr ""
 
 #: admin/partials/botguard-admin-display.php:19
@@ -105,12 +117,6 @@ msgstr ""
 msgid ""
 "Can't overwrite wp-settings.php file. Please check file permissions, it's "
 "not writeable."
-msgstr ""
-
-#: includes/class-botguard-activator.php:116
-msgid ""
-"<p>Your <i>wp-settings.php</i> file was modified. Backup copy was created as "
-"<i>wp-settings.php.bak</i> file.</p>"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

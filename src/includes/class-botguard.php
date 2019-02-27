@@ -69,7 +69,7 @@ class BotGuard {
 		if ( defined( 'PLUGIN_NAME_VERSION' ) ) {
 			$this->version = PLUGIN_NAME_VERSION;
 		} else {
-			$this->version = '1.0.3';
+			$this->version = 'development build';
 		}
 		$this->plugin_name = 'botguard';
 
@@ -158,6 +158,7 @@ class BotGuard {
 		$this->loader->add_action( 'added_option', $plugin_admin, 'update_option', 10, 2 );
 		$this->loader->add_action( 'updated_option', $plugin_admin, 'update_option', 10, 3 );
 		$this->loader->add_action( 'deleted_option', $plugin_admin, 'update_option', 10, 1 );
+		$this->loader->add_action( 'admin_notices', $plugin_admin, 'show_admin_notice' );
 
 	}
 

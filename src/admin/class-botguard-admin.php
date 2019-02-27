@@ -186,7 +186,7 @@ EOT;
 			delete_transient( 'wp_settings_modified' );
 		}
 		if ( get_transient( 'wp_incompatible_plugins' ) ) {
-			echo '<div class="notice notice-success is-dismissible"><p>' . __( '<strong>WP Fastest Cache</strong> plugin is incompatible with BotGuard Wordpress Plugin and <strong>was deactivated</strong>' ) . '</p></div>';
+			echo '<div class="notice notice-success is-dismissible"><p>' . __( '<strong>WP Fastest Cache</strong> plugin is incompatible with BotGuard Wordpress Plugin and <strong>was deactivated</strong>', 'botguard' ) . '</p></div>';
 			delete_transient( 'wp_incompatible_plugins' );
 		}
 	}

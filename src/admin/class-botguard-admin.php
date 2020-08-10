@@ -66,7 +66,7 @@ class BotGuard_Admin {
 	/**
 	 * Utility functions
 	 *
-	 * @since    1.0.4
+	 * @since    1.1.0
 	 */
 	public function isPluginActive( $plugin ) {
 		return in_array( $plugin, (array) get_option( 'active_plugins', array() ) ) || $this->isPluginActiveForNetwork( $plugin );
@@ -178,7 +178,7 @@ EOT;
 	 *
 	 * Provides the information about WordPress config modifications and activation errors.
 	 *
-	 * @since    1.0.4
+	 * @since    1.1.0
 	 */
 	public function show_admin_notice() {
 		if ( get_transient( 'wp_settings_modified' ) ) {

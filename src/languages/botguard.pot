@@ -1,14 +1,14 @@
-# Copyright (C) 2019 BotGuard
+# Copyright (C) 2020 BotGuard
 # This file is distributed under the same license as the BotGuard package.
 msgid ""
 msgstr ""
-"Project-Id-Version: BotGuard 1.0.4\n"
+"Project-Id-Version: BotGuard 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
-"POT-Creation-Date: 2019-02-27 22:58:02+00:00\n"
+"POT-Creation-Date: 2020-08-10 18:02:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
